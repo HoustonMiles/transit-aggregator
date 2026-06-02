@@ -1,0 +1,16 @@
+[project]
+name = "transit-aggregator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.10.9",
+    "pandas>=3.0.3",
+    "pymongo>=4.17.0",
+    "python-dotenv>=1.2.2",
+    "voidcrawl>=0.3.3",
+    "yosoi>=0.0.1a16",
+]
+[tool.uv.sources]
+yosoi = { path = "../../CascadingLabs/Yosoi", editable = true }
