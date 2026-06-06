@@ -60,8 +60,39 @@ print("\n=== Coverage Comparison (Southeast vs Major Cities) ===")
 df['region'] = df['city'].apply(lambda x: 'Southeast' if x == 'Charleston' else 'Major City')
 print(df.groupby('region').size().reset_index(name='count').to_string(index=False))
 
-# --- Analysis 6: Topic Categories by City ---
-print("\n=== Topic Categories by City ===")
+# --- Analysis 6: Summary Stats ---
+print("\n=== Summary Statistics ===")
+print(f"Total articles: {len(df)}")
+print(f"Sources: {df['agency'].nunique()} agencies across {df['city'].nunique()} cities")
+print(f"\nDate range per agency:")
+df_dated = df[df['date'].notna()]
+for agency in df_dated['agency'].unique():
+    agency_df = df_dated[df_dated['agency'] == agency]
+    print(f"  {agency}: {agency_df['date'].min()} → {agency_df['date'].max()}")
+
+# --- Analysis 7: Sentiment Analysis ---
+print("\n=== Sentiment Analysis by City ===")
+from textblob import TextBlob
+
+def get_sentiment(text):
+    if not text:
+        return None
+    score = TextBlob(str(text)).sentiment.polarity
+    if score > 0.1:
+        return 'positive'
+    elif score < -0.1:
+        return 'negative'
+    else:
+        return 'neutral'
+
+df['sentiment'] = df['headline'].apply(get_sentiment)
+print(df.groupby(['city', 'sentiment']).size().unstack(fill_value=0).to_string())
+
+print("\n=== Average Sentiment Score by City ===")
+df['sentiment_score'] = df['headline'].apply(
+    lambda x: TextBlob(str(x)).sentiment.polarity if x else None
+)
+print(df.groupby('city')['sentiment_score'].mean().round(3).to_string())
 
 categories = {
     'Infrastructure': ['bridge', 'road', 'station', 'construction', 'improvement', 'project', 'plan', 'repair'],

@@ -911,6 +911,15 @@ wheels = [
 ]
 
 [[package]]
+name = "joblib"
+version = "1.5.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/41/f2/d34e8b3a08a9cc79a50b2208a93dce981fe615b64d5a4d4abee421d898df/joblib-1.5.3.tar.gz", hash = "sha256:8561a3269e6801106863fd0d6d84bb737be9e7631e33aaed3fb9ce5953688da3", size = 331603, upload-time = "2025-12-15T08:41:46.427Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl", hash = "sha256:5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713", size = 309071, upload-time = "2025-12-15T08:41:44.973Z" },
+]
+
+[[package]]
 name = "joserfc"
 version = "1.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1231,6 +1240,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/0c/f7/addf1087b860ac60e6f382240f64fb99f8bfb532bb06f7c542b83c29ca61/multidict-6.7.1-cp314-cp314t-win_amd64.whl", hash = "sha256:497bde6223c212ba11d462853cfa4f0ae6ef97465033e7dc9940cdb3ab5b48e5", size = 53542, upload-time = "2026-01-26T02:46:08.809Z" },
     { url = "https://files.pythonhosted.org/packages/4c/81/4629d0aa32302ef7b2ec65c75a728cc5ff4fa410c50096174c1632e70b3e/multidict-6.7.1-cp314-cp314t-win_arm64.whl", hash = "sha256:2bbd113e0d4af5db41d5ebfe9ccaff89de2120578164f86a5d17d5a576d1e5b2", size = 44719, upload-time = "2026-01-26T02:46:11.146Z" },
     { url = "https://files.pythonhosted.org/packages/81/08/7036c080d7117f28a4af526d794aab6a84463126db031b007717c1a6676e/multidict-6.7.1-py3-none-any.whl", hash = "sha256:55d97cc6dae627efa6a6e548885712d4864b81110ac76fa4e534c03819fa4a56", size = 12319, upload-time = "2026-01-26T02:46:44.004Z" },
+]
+
+[[package]]
+name = "nltk"
+version = "3.9.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "joblib" },
+    { name = "regex" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/74/a1/b3b4adf15585a5bc4c357adde150c01ebeeb642173ded4d871e89468767c/nltk-3.9.4.tar.gz", hash = "sha256:ed03bc098a40481310320808b2db712d95d13ca65b27372f8a403949c8b523d0", size = 2946864, upload-time = "2026-03-24T06:13:40.641Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9d/91/04e965f8e717ba0ab4bdca5c112deeab11c9e750d94c4d4602f050295d39/nltk-3.9.4-py3-none-any.whl", hash = "sha256:f2fa301c3a12718ce4a0e9305c5675299da5ad9e26068218b69d692fda84828f", size = 1552087, upload-time = "2026-03-24T06:13:38.47Z" },
 ]
 
 [[package]]
@@ -2147,6 +2171,18 @@ wheels = [
 ]
 
 [[package]]
+name = "textblob"
+version = "0.20.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "nltk" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8b/c0/b7f426679211e965f8bf6b65e5eafeda51842502a6ae989b9616895d5fb5/textblob-0.20.0.tar.gz", hash = "sha256:ae9bef3a16cecb4aae3e995cc8c6fe98a9d2a6ffdd58990dcd68e817e8d66b9e", size = 639377, upload-time = "2026-04-01T13:50:20.975Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b9/6e/d487f271c30700354f55b5e56339f38942ab3cb9b6f1464288e252ae3fef/textblob-0.20.0-py3-none-any.whl", hash = "sha256:f32e5240a17a98a8d026cdf7add8f5e0c7d4f1f2e91dad77bc9493e5ab3c6bd5", size = 624962, upload-time = "2026-04-01T13:50:19.423Z" },
+]
+
+[[package]]
 name = "tiktoken"
 version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2193,6 +2229,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pymongo" },
     { name = "python-dotenv" },
+    { name = "textblob" },
     { name = "voidcrawl" },
     { name = "yosoi" },
 ]
@@ -2203,6 +2240,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "pymongo", specifier = ">=4.17.0" },
     { name = "python-dotenv", specifier = ">=1.2.2" },
+    { name = "textblob", specifier = ">=0.20.0" },
     { name = "voidcrawl", specifier = ">=0.3.3" },
     { name = "yosoi", editable = "../../CascadingLabs/Yosoi" },
 ]
@@ -2480,7 +2518,7 @@ wheels = [
 
 [[package]]
 name = "yosoi"
-version = "0.0.1a17"
+version = "0.0.2a19"
 source = { editable = "../../CascadingLabs/Yosoi" }
 dependencies = [
     { name = "aiofiles" },
