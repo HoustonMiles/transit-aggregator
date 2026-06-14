@@ -1,0 +1,2289 @@
+Uninstalled 1 package in 0.62ms
+Installed 3 packages in 6ms
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_20260610_233809.log
+Scraping CARTA...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+    [1/3] HEAD probe detected JS-rendered page — skipping simple HTTP
+    [2/3] Trying headless Chrome...
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+Unexpected error: navigation failed: Request timed out.
+Fetch retry attempt 1/2...
+    [1/3] HEAD probe detected JS-rendered page — skipping simple HTTP
+    [2/3] Trying headless Chrome...
+Unexpected error: navigation failed: Request timed out.
+All 2 attempts failed
+  Error: Failed to fetch https://ridecarta.com/news-announcements/
+Scraping NewsBreak Charleston...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 497,019 characters of HTML (0.25s)
+Step 1.5: Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,227 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,981 → 63,227 chars (79% savings)
+Cleaned HTML ready (63,227 chars)
+Step 2: AI analyzing HTML (attempt 1/3)...
+Discovered selectors for 4 fields (cached=5)
+Discovered selectors for 5 fields
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 4 fields against HTML...
+  ✓ headline: primary works (h3.text-xl.font-bold)
+  ✓ author: primary works (section.my-1 h4.text-black\/85.font-semibold)
+  ✓ date: primary works (section.my-1 div.flex.items-center.space-x-2.text-gray-light.text-sm.my-4.mt-2)
+  ✓ url: primary works (section.flex.flex-row.items-start.my-1 > div.flex-1.mr-3 > a::attr(href))
+  → Summary: 4/4 fields verified
+Verified 4/4 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transitionl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: All lanes reopened after North Charleston crash shuts down Ashley Phosphate Road
+  Saved: Traffic Pacing for I-26/I-95 Interchange Project Beginning June 15
+  Saved: Savannah Highway reopened after gas leak
+  Saved: Road closures scheduled as SCDOT begins Eagles Drive overpass repairs
+  Saved: We’re building tomorrow with yesterday’s roads
+  Saved: SC drops to 4th most-dangerous state for pedestrians, but fatalities are on the rise
+  Saved: Statewide hurricane evacuation exercise may cause minor traffic delays in Horry County
+  Saved: This Charming Train Ride May Be The Most Underrated Experience In All Of South Carolina
+  Saved: FIRST ALERT: Savannah Highway gas leak secured; some lanes still closed
+  Saved: South Carolina sees drop in gas prices
+  Saved: $100-million sewer tunnel project aims to eliminate storm overflows
+  Saved: The COMET offers free rides for voters in Tuesday’s SC primaries
+  Saved: Savannah Highway near Ashley River Bridge reopened after gas leak
+  Saved: SCDOT: Florence Co. bridge over Middle Swamp being replaced; others set for updates
+  Saved: BCDCOG Hosting Public Information Meeting for US 17A Corridor & Congestion Management Plan on June 9
+  Saved: South Carolina Weekly Gas Price Update
+  Saved: Public Invited to Weigh In on Traffic Solutions for Congested US 17A Corridor
+  Saved: Mount Pleasant threatens to pull consent for Highway 41 project as county closes in on permits
+  Saved: SCDOT Seeks Public Input on 2027 Pavement Program for Oconee, Pickens, and Anderson Counties
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 7
+    -- Total Elapsed: 35.2s
+     • Efficiency: 3.5 URLs per LLM call
+
+  ⏱ 1.8s elapsed
+Scraping LA Metro...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 79ms
+Fetched 225,300 characters of HTML (4.31s)
+Step 1.5: Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,291 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,906 → 34,291 chars (46% savings)
+Cleaned HTML ready (34,291 chars)
+Step 2: AI analyzing HTML (attempt 1/3)...
+Discovered selectors for 3 fields (cached=4)
+Discovered selectors for 4 fields
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 3 fields against HTML...
+  ✓ headline: primary works (h3.featured-project__title > a)
+  ✓ date: primary works (div.featured-project__completion)
+  ✓ url: primary works (h3.featured-project__title > a::attr(href))
+  → Summary: 3/3 fields verified
+Verified 3/3 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+  Saved: Broadway Bus Priority Lanes
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 9
+    -- URLs Processed: 9
+    -- Total Elapsed: 96.9s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 6.7s elapsed
+Scraping amNY...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                                                                                                                   │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 182,618 characters of HTML (0.11s)
+Step 1.5: Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,714 → 3,509 chars (6% savings)
+Cleaned HTML ready (3,509 chars)
+Step 2: AI analyzing HTML (attempt 1/3)...
+Discovered selectors for 4 fields (cached=5)
+Discovered selectors for 5 fields
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 4 fields against HTML...
+  ✓ headline: primary works (article.cards-design .metainfo-box h2 > a)
+  ✓ author: primary works (article.article-container h2 > a)
+  ✓ date: primary works (time.entry-date.published.updated::attr(datetime))
+  ✓ url: primary works (article.post.article-container.cards-design h2 > a::attr(href))
+  → Summary: 4/4 fields verified
+Verified 4/4 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+⚠ Semantic check flagged headline — re-discovering (attempt 1/3)
+Traceback (most recent call last):
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/anyio/streams/memory.py", line 117, in receive
+    return self.receive_nowait()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/anyio/streams/memory.py", line 112, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/houston/Documents/github/transit-aggregator/scraper.py", line 88, in main
+    result = await scrape_source(source)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/scraper.py", line 52, in scrape_source
+    async for item in pipeline.scrape(source["url"], fetcher=fetcher):
+    ...<14 lines>...
+            skipped_dup += 1
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/pipeline/base.py", line 506, in scrape
+    async for item in self._gated_fresh(
+    ...<10 lines>...
+        yield item
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/pipeline/base.py", line 566, in _gated_fresh
+    async for item in self._scrape_fresh(
+    ...<10 lines>...
+        yield item
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/pipeline/base.py", line 649, in _scrape_fresh
+    extracted, verified = await self._semantic_refine(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/pipeline/discovery.py", line 298, in _semantic_refine
+    fresh = await self.discovery.discover_selectors(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        cleaned_html, url, stale_fields=failing, feedback=feedback, force=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/orchestrator.py", line 230, in discover_selectors
+    return await self._discover_selectors_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/orchestrator.py", line 318, in _discover_selectors_impl
+    raw_results: list[FieldTaskResult | BaseException] = await asyncio.gather(*coroutines, return_exceptions=True)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/field_task.py", line 253, in run_field_task
+    result = await _discover_field(
+             ^^^^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/field_task.py", line 133, in _discover_field
+    async for attempt in retryer:
+    ...<14 lines>...
+            discovered = llm_result
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/tenacity/asyncio/__init__.py", line 170, in __anext__
+    do = await self.iter(retry_state=self._retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/tenacity/__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/field_task.py", line 135, in _discover_field
+    llm_result = await _invoke_agent(
+                 ^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/field_task.py", line 60, in _invoke_agent
+    return await agent.discover_field(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        field_name, field_description, discovery_input, level, is_container, feedback
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/houston/Documents/CascadingLabs/Yosoi/yosoi/core/discovery/field_agent.py", line 158, in discover_field
+    result = await self._agent.run(build_field_user_prompt(discovery_input, message), deps=deps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/agent/abstract.py", line 444, in run
+    node = await agent_run.next(node)  # pyright: ignore[reportArgumentType]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/run.py", line 404, in next
+    return await self._run_node_with_hooks(node, self._advance_graph)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/run.py", line 328, in _run_node_with_hooks
+    return await self._wrap_and_advance(run_context, node, step_fn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/run.py", line 296, in _wrap_and_advance
+    result = await cap.wrap_node_run(run_context, node=node, handler=step_fn)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/capabilities/combined.py", line 314, in wrap_node_run
+    return await chain(node)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/capabilities/combined.py", line 745, in wrapped
+    return await cap.wrap_node_run(_ctx_for_cap(cap, ctx), node=node, handler=inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/capabilities/abstract.py", line 515, in wrap_node_run
+    return await handler(node)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/capabilities/combined.py", line 745, in wrapped
+    return await cap.wrap_node_run(_ctx_for_cap(cap, ctx), node=node, handler=inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/capabilities/abstract.py", line 515, in wrap_node_run
+    return await handler(node)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_ai/run.py", line 274, in _advance_graph
+    task = await self._graph_run.next(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_graph/graph_builder.py", line 557, in next
+    return await anext(self)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_graph/graph_builder.py", line 530, in __anext__
+    self._next = await self._iterator.asend(self._next)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/pydantic_graph/graph_builder.py", line 660, in iter_graph
+    async for task_result in self.iter_stream_receiver:  # pragma: no branch
+    ...<86 lines>...
+            break
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/anyio/abc/_streams.py", line 35, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/anyio/streams/memory.py", line 125, in receive
+    await receive_event.wait()
+  File "/home/houston/Documents/github/transit-aggregator/.venv/lib/python3.14/site-packages/anyio/_backends/_asyncio.py", line 1804, in wait
+    await self._event.wait()
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/asyncio/locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/houston/Documents/github/transit-aggregator/scraper.py", line 107, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/home/houston/.local/share/uv/python/cpython-3.14.2-linux-x86_64-gnu/lib/python3.14/asyncio/runners.py", line 132, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_20260610_234213.log
+Scraping CARTA...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                                                                                                                           │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,223 characters of HTML (0.15s)
+Step 1.5: Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,998 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,313 → 34,998 chars (19% savings)
+Cleaned HTML ready (34,998 chars)
+Step 2: AI analyzing HTML (attempt 1/3)...
+Discovered selectors for 4 fields (cached=5)
+Discovered selectors for 5 fields
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 4 fields against HTML...
+  ✓ headline: primary works (h3.title > a)
+  ✓ author: primary works (span.meta-author a)
+  ✓ date: primary works (article.masonry-blog-item div.post-meta div.date)
+  ✓ url: primary works (h3.title > a::attr(href))
+  → Summary: 4/4 fields verified
+Verified 4/4 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 9
+    -- Total Elapsed: 144.2s
+     • Efficiency: 3.0 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                                                                                                                     │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 497,037 characters of HTML (0.32s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,227 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,981 → 63,227 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transitionl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 8
+    -- Total Elapsed: 36.3s
+     • Efficiency: 4.0 URLs per LLM call
+
+  ⏱ 1.1s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 85ms
+Fetched 225,327 characters of HTML (3.68s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,291 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,906 → 34,291 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 10
+    -- URLs Processed: 10
+    -- Total Elapsed: 100.9s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.9s elapsed
+Scraping amNY...
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                                                                                                                   │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 183,143 characters of HTML (0.11s)
+Step 1.5: Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,714 → 3,509 chars (6% savings)
+Cleaned HTML ready (3,509 chars)
+Step 2: AI analyzing HTML (attempt 1/3)...
+Discovered selectors for 4 fields (cached=5)
+Discovered selectors for 5 fields
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 4 fields against HTML...
+  ✓ headline: primary works (article.cards-design .metainfo-box h2 > a)
+  ✓ author: primary works (article.article-container h2 > a)
+  ✓ date: primary works (time.entry-date.published.updated::attr(datetime))
+  ✓ url: primary works (article.post.article-container.cards-design h2 > a::attr(href))
+  → Summary: 4/4 fields verified
+Verified 4/4 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+⚠ Semantic check flagged headline — re-discovering (attempt 1/3)
+Discovered selectors for 1 fields (cached=0)
+Step 3: Verifying selectors against actual HTML...
+  → Verifying 1 fields against HTML...
+  ✓ headline: primary works (div.post-thumbnail > a::attr(title))
+  → Summary: 1/1 fields verified
+Verified 1/1 fields successfully
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+  Saved: EXCLUSIVE: DOT proposes installing bus lanes along Brooklyn’s Bay Parkway and Cropsey Avenue
+  Saved: NYC lawmakers revive Ryder’s Law to ban horse carriage industry as another equine dies in Central Park
+  Saved: MTA camera enforcement coming to Brooklyn and Manhattan bus routes on June 12
+  Saved: Staten Island Council member demands answers on potential truck-route changes for Korean War Veterans Parkway
+  Saved: Bronx bus murder: Man shot dead after asking teen to lower voice during cellphone call, sources said
+  Saved: Penn Station overhaul: Developers, Trump admin officially release renderings, but leave it unclear who’ll pay for mega-project
+  Saved: Transit Museum anniversary celebration includes historic Court Street Shuttle rides
+  Saved: Second Avenue Subway: Hochul, MTA brass break ground on tunnel boring for East Harlem extension
+  Saved: New York politicians demand answers over Trump’s Penn Station ‘closed door’ deals
+  Saved: Op-ed | The MTA has Knicks fever, too. Here’s how they’re helping fans celebrate and get around.
+  Saved: Subway staffing: State Senate and Assembly pass transit union-backed bill to make two-person crews permanent
+  Saved: World Cup: MTA will run additional train service on numerous lines for match days
+  Saved: Fair Fares: IBO reports show expanding transit discount program would be cheaper than fare-free buses, but reach fewer riders
+  Saved: After heated meeting, CB 7 green lights 72nd St. bike lanes
+  Saved: FIRST ON amNY: NYC DOT expands pilot program to reduce delivery truck miles traveled in city
+  Saved: Mamdani taps former DOT Commish Janette Sadik-Khan and Deputy Mayor Melanie Hartzog to fill MTA Board vacancies
+  Saved: Mamdani restarts work on 34th Street busway project paused after Trump admin threats last year
+  Saved: City Hall mum on whether Mamdani still wants to remove Ed Koch’s name from Queensboro Bridge
+  Saved: Ask the MTA | New Grand Central Madison entrances, Parade of Trains and more
+  Saved: MTA boss says Penn Station fires are ‘unacceptable’; Amtrak official agrees but calls them ‘anomalies’
+  Saved: Mayor Mamdani’s World Cup traffic game plan will convert 42nd Street into a shuttle and MTA bus corridor on match days
+  Saved: Amtrak, NJ Transit service into Penn Station suspended after fire west of hub
+  Saved: Queensboro Bridge crash leaves e-scooter and bike riders dead; advocates demand safety reform
+  Saved: Subway surfing: NYPD and mother of boy killed in dangerous trend make urgent appeal to children of NYC days after another tragic death
+  Saved: Federal judge throws out Amtrak injunction request in Metro-North track access dispute
+  Saved: Grand Central Madison gets new accessible entrance at 45th Street, boosting access to LIRR riders
+  Saved: MTA cannonballs into summer season with launch of LIRR Hamptons express, additional subway/bus beach service
+  Saved: Fare evasion: Top MTA official says agency is testing ‘European’ enforcement on moving buses
+  Saved: Penn Station rebuild: Trump admin chooses overhaul plan that doesn’t move MSG
+  Saved: Express order: MTA board approves purchase of new diesel buses to run out of Staten Island depot
+  Saved: NYSDOT suspends major project to repair Cross Bronx Expressway bridges amid community pushback
+  Saved: LIRR strike fallout: MTA official defends tentative deal that ended work stoppage as service resumes
+  Saved: Better life on two wheels? Why NYC wants you to participate in a new e-bike health study
+  Saved: Enhanced NYC Ferry service sets sail this summer ahead of FIFA World Cup
+  Saved: Central Park carriage incident reins in renewed calls to ban horse-drawn rides in NYC
+  Saved: MTA and LIRR unions reach deal ending 3-day strike
+  Saved: LIRR STRIKE: Hochul announces deal to end walkout hours after New Yorkers experience fallout from work stoppage
+  Saved: The great derail: Hochul, LIRR unions trade rage over rail strike shutdown ahead of Monday commute
+  Saved: Tattooed man selling swipes wanted for slashing commuter inside Midtown subway station
+  Saved: LIRR STRIKE: Talks break down, and 300,000 commuters now stranded as railroad employees hit picket line
+  Saved: Albany blocks bill to guarantee Staten Island representation on MTA board, rep fumes
+  Saved: Op-Ed | Building the future of New York transit starts with hiring New Yorkers
+  Saved: LIRR strike threat: Contract talks drag on in final hours before walkout that could strand 300,000 daily commuters
+  Saved: Fire breaks out in Penn Station tunnel, disrupting train service through Manhattan hub
+  Saved: MTA gate guard caught on camera trading OMNY swipes for cash: agency watchdog
+  Saved: Queens man booked for manslaughter after deadly fight on subway train in Bronx: cops
+  Saved: LIRR strike threat: MTA labor lawyer says worker walkout is avoidable, but unions say they are far from deal
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 7
+    -- Total Elapsed: 56.5s
+     • Efficiency: 2.3 URLs per LLM call
+
+  ⏱ 24.0s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.98s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.12s
+  LA Metro: 0 saved, 9 dupes, 3.95s
+  amNY: 47 saved, 1 dupes, 24.08s
+
+Total in DB: 153
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+1_000004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,223 characters of HTML (0.25s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,998 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,313 → 34,998 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 11
+    -- Total Elapsed: 145.4s
+     • Efficiency: 3.7 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 496,965 characters of HTML (0.23s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,227 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,981 → 63,227 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 10
+    -- Total Elapsed: 38.4s
+     • Efficiency: 5.0 URLs per LLM call
+
+  ⏱ 1.1s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 125ms
+Fetched 225,298 characters of HTML (3.08s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,291 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,906 → 34,291 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 12
+    -- URLs Processed: 12
+    -- Total Elapsed: 107.8s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.3s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 183,143 characters of HTML (0.20s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,714 → 3,509 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 9
+    -- Total Elapsed: 59.4s
+     • Efficiency: 3.0 URLs per LLM call
+
+  ⏱ 1.6s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.81s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.14s
+  LA Metro: 0 saved, 9 dupes, 3.37s
+  amNY: 0 saved, 48 dupes, 1.63s
+
+Total in DB: 153
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+1_060003.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,225 characters of HTML (2.62s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 35,000 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,315 → 35,000 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 12
+    -- Total Elapsed: 148.4s
+     • Efficiency: 4.0 URLs per LLM call
+
+  ⏱ 3.0s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 495,758 characters of HTML (0.25s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,410 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,585 → 63,410 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: Charleston County seeks $10 million grant for North Bridge Project
+  Saved: Charleston County Airport Road Connector project moves forward
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 11
+    -- Total Elapsed: 39.5s
+     • Efficiency: 5.5 URLs per LLM call
+
+  ⏱ 1.1s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 87ms
+Fetched 225,330 characters of HTML (2.78s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,291 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,906 → 34,291 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 13
+    -- URLs Processed: 13
+    -- Total Elapsed: 110.8s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.0s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 182,538 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,714 → 3,509 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 10
+    -- Total Elapsed: 60.7s
+     • Efficiency: 3.3 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 5.2s
+  NewsBreak Charleston: 2 saved, 18 dupes, 1.16s
+  LA Metro: 0 saved, 9 dupes, 3.09s
+  amNY: 0 saved, 48 dupes, 1.38s
+
+Total in DB: 155
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+1_120005.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,222 characters of HTML (1.42s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,997 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,312 → 34,997 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 13
+    -- Total Elapsed: 150.3s
+     • Efficiency: 4.3 URLs per LLM call
+
+  ⏱ 1.9s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 493,362 characters of HTML (0.41s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,290 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 306,979 → 62,290 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: Charleston roads among nation’s most dangerous, report says
+  Saved: This Charming South Carolina Town Has The Oldest Railroad Junction In The World
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 12
+    -- Total Elapsed: 40.9s
+     • Efficiency: 6.0 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 102ms
+Fetched 228,504 characters of HTML (4.53s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,858 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 66,983 → 34,858 chars (48% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 14
+    -- URLs Processed: 14
+    -- Total Elapsed: 115.7s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.8s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 182,622 characters of HTML (0.09s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,613 → 3,408 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+  Saved: Truck stop? Scenic Staten Island parkway may open to the big rigs
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 11
+    -- Total Elapsed: 62.2s
+     • Efficiency: 3.7 URLs per LLM call
+
+  ⏱ 1.5s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 4.68s
+  NewsBreak Charleston: 2 saved, 18 dupes, 1.43s
+  LA Metro: 0 saved, 9 dupes, 4.87s
+  amNY: 1 saved, 47 dupes, 1.5s
+
+Total in DB: 158
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+1_180005.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,264 characters of HTML (0.17s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,995 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,310 → 34,995 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 14
+    -- Total Elapsed: 150.9s
+     • Efficiency: 4.7 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 493,226 characters of HTML (0.55s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,608 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 306,821 → 62,608 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: Charleston County seeks final feedback on $4.25B transportation tax referendum
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 13
+    -- Total Elapsed: 42.3s
+     • Efficiency: 6.5 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 99ms
+Fetched 226,402 characters of HTML (4.12s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,308 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,308 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 15
+    -- URLs Processed: 15
+    -- Total Elapsed: 120.1s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.4s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 181,710 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,556 → 3,351 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+  Saved: Queens Council member floats carriage horse welfare bill to counter measure to ban industry
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 12
+    -- Total Elapsed: 64.7s
+     • Efficiency: 4.0 URLs per LLM call
+
+  ⏱ 2.5s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 3.31s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.45s
+  LA Metro: 0 saved, 9 dupes, 4.46s
+  amNY: 1 saved, 47 dupes, 2.53s
+
+Total in DB: 160
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+2_000004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,225 characters of HTML (1.42s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 35,000 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,315 → 35,000 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 15
+    -- Total Elapsed: 152.8s
+     • Efficiency: 5.0 URLs per LLM call
+
+  ⏱ 1.9s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 492,431 characters of HTML (0.23s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,207 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 306,840 → 62,207 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 14
+    -- Total Elapsed: 43.4s
+     • Efficiency: 7.0 URLs per LLM call
+
+  ⏱ 1.1s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 423ms
+Fetched 226,358 characters of HTML (3.12s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,308 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,308 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 16
+    -- URLs Processed: 16
+    -- Total Elapsed: 123.5s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.4s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 181,396 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,556 → 3,351 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 13
+    -- Total Elapsed: 66.0s
+     • Efficiency: 4.3 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 4.13s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.14s
+  LA Metro: 0 saved, 9 dupes, 3.41s
+  amNY: 0 saved, 48 dupes, 1.38s
+
+Total in DB: 160
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+2_060004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,221 characters of HTML (2.94s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,996 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,311 → 34,996 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 16
+    -- Total Elapsed: 156.2s
+     • Efficiency: 5.3 URLs per LLM call
+
+  ⏱ 3.4s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 493,381 characters of HTML (0.24s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,628 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 306,841 → 62,628 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 15
+    -- Total Elapsed: 44.5s
+     • Efficiency: 7.5 URLs per LLM call
+
+  ⏱ 1.0s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 86ms
+Fetched 226,422 characters of HTML (3.21s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 17
+    -- URLs Processed: 17
+    -- Total Elapsed: 126.9s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.5s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 181,792 characters of HTML (0.10s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,556 → 3,351 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 14
+    -- Total Elapsed: 67.4s
+     • Efficiency: 4.7 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 5.57s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.07s
+  LA Metro: 0 saved, 9 dupes, 3.52s
+  amNY: 0 saved, 48 dupes, 1.42s
+
+Total in DB: 160
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+2_120003.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,224 characters of HTML (2.63s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,999 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,314 → 34,999 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 17
+    -- Total Elapsed: 159.3s
+     • Efficiency: 5.7 URLs per LLM call
+
+  ⏱ 3.1s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,685 characters of HTML (0.32s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,947 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,207 → 62,947 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: SC conducts highway reversal drill in preparation for ‘26 hurricane season
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 16
+    -- Total Elapsed: 45.8s
+     • Efficiency: 8.0 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 80ms
+Fetched 226,412 characters of HTML (4.01s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 18
+    -- URLs Processed: 18
+    -- Total Elapsed: 131.2s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.3s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 181,343 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 3,556 → 3,351 chars (6% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 15
+    -- Total Elapsed: 68.7s
+     • Efficiency: 5.0 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 5.26s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.41s
+  LA Metro: 0 saved, 9 dupes, 4.32s
+  amNY: 0 saved, 48 dupes, 1.39s
+
+Total in DB: 161
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+2_180004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,220 characters of HTML (0.25s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,995 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,310 → 34,995 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 18
+    -- Total Elapsed: 160.0s
+     • Efficiency: 6.0 URLs per LLM call
+
+  ⏱ 0.7s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,137 characters of HTML (0.28s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,188 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,392 → 63,188 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: ‘It’s the price to pay’: Charleston County council hears final public comments on transportation sales tax referendum
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 17
+    -- Total Elapsed: 47.2s
+     • Efficiency: 8.5 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 112ms
+Fetched 226,428 characters of HTML (2.90s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 19
+    -- URLs Processed: 19
+    -- Total Elapsed: 134.4s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.2s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,074 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 16
+    -- Total Elapsed: 70.1s
+     • Efficiency: 5.3 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 3.04s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.43s
+  LA Metro: 0 saved, 9 dupes, 3.19s
+  amNY: 0 saved, 48 dupes, 1.4s
+
+Total in DB: 162
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+3_000003.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,223 characters of HTML (2.13s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,998 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,313 → 34,998 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 19
+    -- Total Elapsed: 162.5s
+     • Efficiency: 6.3 URLs per LLM call
+
+  ⏱ 2.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,211 characters of HTML (0.67s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,206 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,410 → 63,206 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 18
+    -- Total Elapsed: 48.8s
+     • Efficiency: 9.0 URLs per LLM call
+
+  ⏱ 1.6s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 91ms
+Fetched 226,446 characters of HTML (3.16s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 20
+    -- URLs Processed: 20
+    -- Total Elapsed: 137.8s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.4s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,383 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 17
+    -- Total Elapsed: 71.4s
+     • Efficiency: 5.7 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 4.76s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.65s
+  LA Metro: 0 saved, 9 dupes, 3.45s
+  amNY: 0 saved, 48 dupes, 1.4s
+
+Total in DB: 162
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+3_060004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,223 characters of HTML (0.23s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,998 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,313 → 34,998 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 20
+    -- Total Elapsed: 163.2s
+     • Efficiency: 6.7 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,247 characters of HTML (0.34s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,205 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,409 → 63,205 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 19
+    -- Total Elapsed: 50.0s
+     • Efficiency: 9.5 URLs per LLM call
+
+  ⏱ 1.2s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 81ms
+Fetched 226,356 characters of HTML (2.84s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,308 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,308 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 21
+    -- URLs Processed: 21
+    -- Total Elapsed: 140.9s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.1s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,256 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 18
+    -- Total Elapsed: 72.8s
+     • Efficiency: 6.0 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.81s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.22s
+  LA Metro: 0 saved, 9 dupes, 3.14s
+  amNY: 0 saved, 48 dupes, 1.44s
+
+Total in DB: 162
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+3_120004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,221 characters of HTML (2.60s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,996 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,311 → 34,996 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 21
+    -- Total Elapsed: 166.2s
+     • Efficiency: 7.0 URLs per LLM call
+
+  ⏱ 3.0s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,729 characters of HTML (0.24s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 63,337 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 308,165 → 63,337 chars (79% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: VIDEO: Staying Safe on the Roads this Summer with Attorney Trey Harrell
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 20
+    -- Total Elapsed: 51.1s
+     • Efficiency: 10.0 URLs per LLM call
+
+  ⏱ 1.1s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 81ms
+Fetched 226,397 characters of HTML (3.44s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 22
+    -- URLs Processed: 22
+    -- Total Elapsed: 144.6s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.7s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,005 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 19
+    -- Total Elapsed: 74.2s
+     • Efficiency: 6.3 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 5.31s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.16s
+  LA Metro: 0 saved, 9 dupes, 3.74s
+  amNY: 0 saved, 48 dupes, 1.43s
+
+Total in DB: 163
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+3_180004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,222 characters of HTML (0.23s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,997 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,312 → 34,997 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 22
+    -- Total Elapsed: 166.8s
+     • Efficiency: 7.3 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,240 characters of HTML (0.26s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,498 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,437 → 62,498 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: Road paving to impact traffic in Beaufort County
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 21
+    -- Total Elapsed: 52.3s
+     • Efficiency: 10.5 URLs per LLM call
+
+  ⏱ 1.2s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 89ms
+Fetched 226,580 characters of HTML (4.09s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 23
+    -- URLs Processed: 23
+    -- Total Elapsed: 148.9s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.3s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 205,883 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 20
+    -- Total Elapsed: 75.5s
+     • Efficiency: 6.7 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.82s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.22s
+  LA Metro: 0 saved, 9 dupes, 4.38s
+  amNY: 0 saved, 48 dupes, 1.4s
+
+Total in DB: 164
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+4_000003.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,224 characters of HTML (0.16s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,999 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,314 → 34,999 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 23
+    -- Total Elapsed: 167.4s
+     • Efficiency: 7.7 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,393 characters of HTML (0.25s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,502 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,441 → 62,502 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 22
+    -- Total Elapsed: 53.6s
+     • Efficiency: 11.0 URLs per LLM call
+
+  ⏱ 1.2s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 752ms
+Fetched 229,492 characters of HTML (4.47s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,876 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 67,008 → 34,876 chars (48% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 24
+    -- URLs Processed: 24
+    -- Total Elapsed: 153.7s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.7s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,060 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 21
+    -- Total Elapsed: 76.8s
+     • Efficiency: 7.0 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.74s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.28s
+  LA Metro: 0 saved, 9 dupes, 4.78s
+  amNY: 0 saved, 48 dupes, 1.35s
+
+Total in DB: 164
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+4_060003.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,224 characters of HTML (1.17s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,999 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,314 → 34,999 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 24
+    -- Total Elapsed: 169.0s
+     • Efficiency: 8.0 URLs per LLM call
+
+  ⏱ 1.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,386 characters of HTML (0.28s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,612 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,495 → 62,612 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 23
+    -- Total Elapsed: 54.9s
+     • Efficiency: 11.5 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 96ms
+Fetched 226,428 characters of HTML (3.19s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 25
+    -- URLs Processed: 25
+    -- Total Elapsed: 157.1s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 3.4s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,196 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 22
+    -- Total Elapsed: 78.1s
+     • Efficiency: 7.3 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 3.78s
+  NewsBreak Charleston: 0 saved, 20 dupes, 1.34s
+  LA Metro: 0 saved, 9 dupes, 3.48s
+  amNY: 0 saved, 48 dupes, 1.36s
+
+Total in DB: 164
+Langfuse not initialized — set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to enable
+ℹ Log file: 
+file:///home/houston/Documents/github/transit-aggregator/.yosoi/logs/run_2026061
+4_120004.log
+Scraping CARTA...
+✓ Found cached selectors for ridecarta.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://ridecarta.com/news-announcements/                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+Fetched 140,220 characters of HTML (0.21s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,995 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 43,310 → 34,995 chars (19% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 10 items with container selector: article.masonry-blog-item
+  ↻ Extracted 10 non-empty items
+Extracted 10 items successfully
+
+  - Tracking Stats for ridecarta.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 25
+    -- Total Elapsed: 169.6s
+     • Efficiency: 8.3 URLs per LLM call
+
+  ⏱ 0.6s elapsed
+Scraping NewsBreak Charleston...
+✓ Found cached selectors for newsbreak.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.newsbreak.com/charleston-sc-traffic                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ newsbreak.com — using cached tier simple, selector level css
+Fetched 494,002 characters of HTML (0.24s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 62,344 chars (above 30,000 warning threshold)
+  ↻ Using <main> inside <body>: 307,283 → 62,344 chars (80% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 20 items with container selector: 
+section.my-1.md\:my-2.p-4.mx-[-16px\].md\:hover\:bg-black\/5.rounded-lg.transiti
+onl-[background\]
+  ↻ Extracted 20 non-empty items
+Extracted 20 items successfully
+  Saved: Built in 1883 to haul granite, this SC rail line now carries passengers on weekend rides
+
+  - Tracking Stats for newsbreak.com:
+    -- LLM Calls: 2
+    -- URLs Processed: 24
+    -- Total Elapsed: 56.2s
+     • Efficiency: 12.0 URLs per LLM call
+
+  ⏱ 1.3s elapsed
+Scraping LA Metro...
+✓ Found cached selectors for metro.net
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.metro.net/projects-listing/                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ metro.net — using cached tier headless, selector level css
+  ↳ Starting headless Chrome...
+  ↻ A3Node cache disabled — running DOMLoader fresh
+  ↻ DOMLoader: 0 items found initially
+  ↻ DOMLoader: Nothing left to do — done
+  ↻ DOMLoader: 0 → 0 items in 93ms
+Fetched 226,416 characters of HTML (3.78s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ⚠ Content is 34,309 chars (above 30,000 warning threshold)
+  ↻ Using <body>: 63,931 → 34,309 chars (46% savings)
+⚠ Selector cache missing current contract field(s): author — discovering only 
+those field(s)
+  ↳ 4 fresh, 1 stale — partial rediscovery for: author
+Step 4: Extracting content using verified selectors...
+  ↻ Found 9 items with container selector: .featured-project
+  ↻ Extracted 9 non-empty items
+Extracted 9 items successfully
+
+  - Tracking Stats for metro.net:
+    -- LLM Calls: 26
+    -- URLs Processed: 26
+    -- Total Elapsed: 161.1s
+     • Efficiency: 1.0 URLs per LLM call
+
+  ⏱ 4.0s elapsed
+Scraping amNY...
+✓ Found cached selectors for amny.com
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Processing: https://www.amny.com/nyc-transit/                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Step 1: Fetching HTML...
+  ↳ amny.com — using cached tier simple, selector level css
+Fetched 206,583 characters of HTML (0.11s)
+Cleaning HTML...
+  ↻ Removed sidebar/widget/ad boilerplate
+  ↻ Using <main> inside <body>: 4,289 → 3,982 chars (7% savings)
+✓ All 5 cached selectors verified
+Step 4: Extracting content using verified selectors...
+  ↻ Found 48 items with container selector: .post.article-container.cards-design
+  ↻ Extracted 48 non-empty items
+Extracted 48 items successfully
+
+  - Tracking Stats for amny.com:
+    -- LLM Calls: 3
+    -- URLs Processed: 23
+    -- Total Elapsed: 79.5s
+     • Efficiency: 7.7 URLs per LLM call
+
+  ⏱ 1.4s elapsed
+
+Done! Run summary:
+  CARTA: 0 saved, 10 dupes, 2.83s
+  NewsBreak Charleston: 1 saved, 19 dupes, 1.33s
+  LA Metro: 0 saved, 9 dupes, 4.07s
+  amNY: 0 saved, 48 dupes, 1.41s
+
+Total in DB: 165
