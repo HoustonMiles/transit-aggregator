@@ -31,7 +31,7 @@ class TransitArticle(ys.Contract):
 SOURCES = [
     {"url": "https://ridecarta.com/news-announcements/", "city": "Charleston", "agency": "CARTA", "fetcher_type": "simple"},
     {"url": "https://www.newsbreak.com/charleston-sc-traffic", "city": "Charleston", "agency": "NewsBreak Charleston", "fetcher_type": "waterfall"},
-    {"url": "https://www.metro.net/projects-listing/", "city": "Los Angeles", "agency": "LA Metro", "fetcher_type": "waterfall"},
+    {"url": "https://www.metro.net/about_categories/news-releases/", "city": "Los Angeles", "agency": "LA Metro", "fetcher_type": "waterfall"},
     {"url": "https://www.amny.com/nyc-transit/", "city": "New York", "agency": "amNY", "fetcher_type": "waterfall"},
 ]
 
